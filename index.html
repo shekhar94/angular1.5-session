@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+
+<body ng-app="directiveDemo">
+    <div class="jumbotron">
+        <h1>Angular Directives</h1>
+    </div>
+    <div ng-controller="Controller">
+        <div tpl-dir1></div>
+        <div tpl-dir2 type="name"></div>
+        <tpl-dir3 type="name"></tpl-dir3>
+        <div tpl-dir6>
+            <button id="first">first</button>
+            <button id="second">second</button>
+            <button id="third">third</button>
+            <button id="fourth">fourth</button>
+        </div>
+        <tpl-dir5 info="naomi"></tpl-dir5>
+        <hr>
+        <tpl-dir5 info="igor"></tpl-dir5>
+    </div>
+    <div>
+        <table>
+            <tr ng-repeat="data in [{name: 'shekhar'},{name: 'suman'}]">
+                <td>Data</td>
+                <td><input value="{{data.name}}"></td>
+            </tr>
+            <tr class="text-danger">
+                <td>Error</td>
+                <td>msg</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
