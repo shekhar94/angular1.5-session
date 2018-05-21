@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+        <div>JS sessions OOPS</div>
+        <script>
+            function Person(name, company) {
+                this.name1 = name;
+                this.company = company;
+
+                // this.getName = function() {
+                //     return this.name1;
+                //     // var that = this;
+                //     // return (function() {
+                //     //         return {"name": that.name1, "company": that.company};
+                //     //     })();
+                // }
+                // this.setName = function(name) {
+                //     this.name1 = name;
+                // }
+            }
+
+            Person.prototype.getName = function() {
+                return this.name1;
+            }
+            Person.prototype.setName = function(name) {
+                this.name1 = name;
+            }
+
+            var p1 = new Person("subham", "Dgenx");
+            var p2 = new Person("sudan", "Dgenx1");
+            p1.setName("Sonam");
+            console.log(p1.getName());
+            // var result = p1.getName();
+            // console.log(result);
+            // p1.setName("sudhansu");
+            // console.log(p1.getName());
+
+
+            // console.log(p2.getName());
+            // console.log()
+        </script>
+       <!-- <script type="text/javascript" src="index.js"></script>  -->
+    </body>
+</html>
+
+

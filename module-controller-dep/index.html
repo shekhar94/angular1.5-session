@@ -15,6 +15,11 @@
         <h1>Angular Module, controller, dependency injection scopes</h1>
     </div>
     <div ng-controller="ParentController">
+        <input ng-model="modelDemo">
+        <span ng-bind="::modelDemo"></span>
+        <br>
+        <span ng-bind="showAlert()"></span>
+        <div ng-repeat="name in names">{{name | uppercase}}</div>
         {{data.name}}
         <!-- scope hierarchy -->
         <div ng-controller="Child1Controller">
